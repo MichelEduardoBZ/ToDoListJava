@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
-public class task {
+public class Task {
 	
 	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -13,7 +13,7 @@ public class task {
 	private LocalDate date;
 	private Integer id;
 
-	public task(String nameTask, String task, LocalDate date, Integer id) {
+	public Task(String nameTask, String task, LocalDate date, Integer id) {
 		this.task = task;
 		this.date = date;
 		this.nameTask = nameTask;

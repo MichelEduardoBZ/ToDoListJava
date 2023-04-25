@@ -5,12 +5,12 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
-import Controller.taskController;
+import Controller.TaskController;
 
 public class Main {
 
 	static Scanner sc = new Scanner(System.in);
-	static taskController taskController = new taskController();
+	static TaskController taskController = new TaskController();
 	static DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 	public static void main(String[] args) {

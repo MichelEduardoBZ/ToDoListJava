@@ -5,37 +5,37 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-import Tasks.task;
+import Tasks.Task;
 
-public class taskController {
+public class TaskController {
 
-	private task task;
+	private Task task;
 
 	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-	private List<task> listTask = new ArrayList<>();
+	private List<Task> listTask = new ArrayList<>();
 
 	Integer i = 0;
 
-	public task getTask() {
+	public Task getTask() {
 		return task;
 	}
 
-	public void setTask(task task) {
+	public void setTask(Task task) {
 		this.task = task;
 	}
 
-	public List<task> getListTask() {
+	public List<Task> getListTask() {
 		return listTask;
 	}
 
-	public void setListTask(List<task> listTask) {
+	public void setListTask(List<Task> listTask) {
 		this.listTask = listTask;
 	}
 
 	// Adiciona a task
 	public void addTask(String nameTask, String descp, LocalDate date) {
-		listTask.add(new task(nameTask, nameTask, date, i++));
+		listTask.add(new Task(nameTask, nameTask, date, i++));
 	}
 
 	// Remove uma task
@@ -44,7 +44,7 @@ public class taskController {
 		this.getListTask().remove(id - 1);
 
 		int i = 0;
-		for (task x : this.getListTask()) {
+		for (Task x : this.getListTask()) {
 			i++;
 			x.setId(i);
 		}
